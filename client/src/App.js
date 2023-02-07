@@ -1,11 +1,25 @@
 import './App.css';
+import { Route } from 'react-router-dom';
+import LandingPage from './Components/Landing/LandingPage';
+import Home from './Components/Home/Home';
+import Detail from './Components/Detail/Detail';
+import Form from './Components/Form/Form';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Henry Pokemon</h1>
+    
+      <Route path='/' exact component={LandingPage} />
+      
+      <Route path='/pokemons' exact component={Home} />
+
+      <Route path='/pokemons/:id' exact component={Detail} />
+      
+      <Route path='/form' exact component={Form} />
+
     </div>
   );
-}
+};
 
 export default App;

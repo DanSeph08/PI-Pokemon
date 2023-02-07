@@ -6,8 +6,8 @@ const router = Router();
 router.get('/pokemons/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        let pokeId = await getPokemonsId(id)
-        res.status(200).send(pokeId);
+        let pokemoId = await getPokemonsId(id)
+        res.status(200).send(pokemoId);
     }
     catch (error) {
         res.status(400).send({ error: error.message });

@@ -9,8 +9,8 @@ router.post('/', async (req, res) => {
         if (!name) throw new Error('A name is needed to create the pokemon');
         const pokeCreate = await postPokemon(name, life, attack, defense, speed, height, weight, image);
         if (pokeCreate) {
-            const dbTypes = await Type.findAll({ where: { name: types } });
-            pokeCreate.addType(dbTypes);
+            const dbTypes = await Type.findOrCreate({ where: { name: types } });
+            await pokeCreate.addType(dbTypes[0]);
             res.status(200).send(`The pokemon ${name} was created successfully`);
         }
         else {

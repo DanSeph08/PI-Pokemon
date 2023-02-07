@@ -2,32 +2,45 @@ import {
     ERROR,
     GET_ALL_POKES,
     GET_BY_NAME,
-    GET_BY_ID
+    GET_BY_ID,
+    GET_TYPES,
+    CLEAR_DETAIL
 } from './Actions';
 
 const initialState = {
     pokemons: [],
     pokeName: [],
     pokeDetail: {},
+    types: [],
     error: {}
 }
 
 function rootReducer(state = initialState, action) {
-    switch (action.payload) {
+    switch (action.type) {
         case GET_ALL_POKES:
             return {
                 ...state,
-                pokemons: action.payload
+                pokemons: action.payload,
             }
         case GET_BY_NAME:
             return {
                 ...state,
-                pokeName: action.payload
+                pokeName: action.payload,
             }
         case GET_BY_ID:
             return {
                 ...state,
-                pokeDetail: action.payload
+                pokeDetail: action.payload,
+            }
+        case GET_TYPES:
+            return {
+                ...state,
+                types: action.payload,
+            }
+        case CLEAR_DETAIL:
+            return {
+                ...state,
+                pokeDetail: [],
             }
         case ERROR:
             return {
