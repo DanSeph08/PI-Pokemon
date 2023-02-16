@@ -58,5 +58,7 @@
 }
 
 #CreatePokemon {
-
+    font-size: 22px;
+    color: aliceblue;
+    margin-top: 13px;
 }
