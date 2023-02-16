@@ -9,13 +9,13 @@ import Form from './Components/Form/Form';
 function App() {
   return (
     <div className="App">
-    
+
       <Route path='/' exact component={LandingPage} />
       
       <Route path='/pokemons' exact component={Home} />
 
       <Route path='/pokemons/:id' exact component={Detail} />
-      
+        
       <Route path='/form' exact component={Form} />
 
     </div>

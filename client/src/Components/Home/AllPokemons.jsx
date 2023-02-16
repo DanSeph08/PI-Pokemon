@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { getAllPokemons } from "../../Redux/Actions";
+import './Css/AllPokemons.css';
 
 const AllPokemons = () => {
     const dispatch = useDispatch();

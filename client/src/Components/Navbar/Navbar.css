@@ -1,0 +1,17 @@
+.Nav1, .Nav2, .Nav3 {
+    color: #000;
+    padding: 4px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Nav1:link, .Nav2:link, .Nav3:link, .Nav1:visited, .Nav2:visited, .Nav3:visited, .Nav1:active, .Nav2:active, .Nav3:active {
+    text-decoration-line: none;
+}
+
+.Nav1:hover, .Nav2:hover, .Nav3:hover{
+    font-size: 26px;
+    cursor: pointer;
+    font-style: italic;
+    color: #b4741f;
+}

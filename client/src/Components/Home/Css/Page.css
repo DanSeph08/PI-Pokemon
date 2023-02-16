@@ -1,0 +1,16 @@
+.List {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Num {
+    border-radius: 5px;
+    border: 0.5px solid rgb(0, 0, 0);   
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.Num:hover {
+    cursor: pointer;
+}

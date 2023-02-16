@@ -1,4 +1,5 @@
 import React from "react";
+import '../Home/Css/Page.css';
 
 const Page = ({ pokemons, pokeXPage, page }) => {
     const pageNumber = [];

@@ -1,0 +1,39 @@
+.Detail {
+    height: 100vh;
+}
+
+.DetailTitle {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 3.5em;
+    color: aliceblue;
+    text-shadow: -5px -5px 3px #b4741f;
+}
+
+.DetailName {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    font-size: 22px;
+    color: aliceblue;
+    text-shadow: -5px -5px 3px #b4741f;
+}
+
+.DetailImg {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 50px;
+    box-shadow: 0 8px 8px 8px  rgb(92, 92, 92); 
+}
+
+.DetailProp {
+    margin-top: 48px;
+    width: 400px;
+    height: 300px;
+    margin-left: 755px;
+    padding: 5px 0 5px 0;
+    background-color: rgba(221, 221, 221, 0.466);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

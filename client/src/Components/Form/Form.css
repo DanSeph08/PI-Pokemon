@@ -1,0 +1,62 @@
+.Cont {
+    background-image: url('../../Imgs/desktop-wallpaper-collection-of-best-pokemon-on.jpg');
+    background-attachment: fixed ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.FormAll {
+    background-color: #0c0c0c73;
+    width: 45%;
+    height: 62%;
+    margin: 10% 0 0 28%;
+}
+
+.TitleForm {
+    font-size: 4em;
+    color: aliceblue;
+    text-shadow: -5px -5px 3px #b4741f;
+    margin-bottom: 20px;
+}
+
+.Space {
+    margin-bottom: 9px;
+}
+
+.FormName {
+    font-size: 22px;
+    color: aliceblue;
+}
+
+#FormBut{
+    border-radius: 5px;
+}
+
+.ButSubmit {
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 3px;
+    font-size: 20px;
+    color: #000;
+    margin-top: 13px;
+}
+
+.ButSubmit:hover {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #b4741f;
+    cursor: pointer;
+}
+
+.Finally {
+    position: absolute;
+    left: 550px;
+    top: 650px;
+}
+
+#CreatePokemon {
+
+}

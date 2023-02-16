@@ -5,7 +5,13 @@ import Card from "./Card";
 import InputName from "./InputName";
 import AllPokemons from "./AllPokemons";
 import Page from "./Page";
-import Navbar from "../Navbar/Navbar";
+import Filters from "./Filters";
+import Navbar from '../Navbar/Navbar';
+import Pica from '../../Imgs/abbe28a943ed44fcd98452687f7c46c9.gif';
+import '../Home/Css/Home.css';
+import '../Home/Css/Pre.css';
+import '../Home/Css/Card.css'
+
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -28,11 +34,12 @@ const Home = () => {
     if (currentPoke.length) {
         return (
             <div className="Home">
-                <h1 className="Title">All Pokemons</h1>
                 <div className="Navigation">
+                <h1 className="Titles">All Pokemons</h1>
                     <Navbar />
-                    <InputName />
                     <AllPokemons />
+                    <Filters />
+                    <InputName />
                 </div>
                 <div className="Container">
                     {currentPoke.map(pokemon => <Card key={pokemon.id} pokemon={pokemon} />)}
@@ -42,10 +49,11 @@ const Home = () => {
         )
     } else {
         return (
-            <>
+            <div className="Pre">
                 <h2 className="Loading">Loading...</h2>
-                <h6 className="Please">Please Wait</h6>
-            </>
+                <h6 className="Please">Please Wait...</h6>
+                <img className="Pica" src={Pica} alt="Pica" />
+            </div>
         )
     }
 };

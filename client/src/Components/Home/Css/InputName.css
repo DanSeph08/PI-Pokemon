@@ -1,0 +1,23 @@
+.InputName {
+    padding-right: 45px;
+}
+
+.Input {
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.Butt {
+    margin-left: 5px;
+    border: 2px solid rgb(219, 219, 228);
+    color: #000;
+    padding: 4px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.Butt:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: #b4741f;
+    font-size: 18px;
+}

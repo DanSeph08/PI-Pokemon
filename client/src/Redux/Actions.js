@@ -6,6 +6,9 @@ export const GET_BY_ID = 'GET_BY_ID';
 export const GET_TYPES = 'GET_TYPES';
 export const POST_FORM = 'POST_FORM';
 export const CLEAR_DETAIL = 'CLEAR_DETAIL';
+export const FILTER_STATUS = 'FILTER_STATUS';
+export const FILTER_TYPE = 'FILTER_TYPE';
+export const ORDER_ASC_DESC = 'ORDER_ASC_DESC';
 export const ERROR = 'ERROR';
 
 export const getAllPokemons = () => {
@@ -20,7 +23,7 @@ export const getAllPokemons = () => {
         } catch (error) {
             return dispatch({
                 type: ERROR,
-                payload: error
+                payload: error.message
             });
         }
     }
@@ -29,7 +32,7 @@ export const getAllPokemons = () => {
 export const getByName = (name) => {
     return async function (dispatch) {
         try {
-            const response = await axios.get(`http://localhost:3001/pokemons?name=${name}`);
+            const response = await axios.get("http://localhost:3001/pokemons?name=" + name);
             const pokeName = response.data;
             return dispatch({
                 type: GET_BY_NAME,
@@ -38,7 +41,7 @@ export const getByName = (name) => {
         } catch (error) {
             return dispatch({
                 type: ERROR,
-                payload: error
+                payload: error.message
             });
         }
     }
@@ -56,7 +59,7 @@ export const getById = (id) => {
         } catch (error) {
             return dispatch({
                 type: ERROR,
-                payload: error
+                payload: error.message
             });
         }
     }
@@ -74,7 +77,7 @@ export const getTypes = () => {
         } catch (error) {
             return dispatch({
                 type: ERROR,
-                payload: error
+                payload: error.message
             });
         }
     }
@@ -83,14 +86,14 @@ export const getTypes = () => {
 export const postForm = (body) => {
     return async function (dispatch) {
         try {
-            await axios.post('http://localhost:3001/game', body);
+            await axios.post('http://localhost:3001/pokemon', body);
             dispatch({
                 type: POST_FORM
             })
         } catch (error) {
             return dispatch({
                 type: ERROR,
-                payload: error
+                payload: error.message
             });
         }
     }
@@ -98,4 +101,55 @@ export const postForm = (body) => {
 
 export const clearDetail = () => {
     return { type: CLEAR_DETAIL };
+};
+
+export const filterStatus = (value) => {
+    return dispatch => {
+        try {
+            console.log(value);
+            dispatch({
+                type: FILTER_STATUS,
+                payload: value,
+            })
+        } catch (error) {
+            dispatch({
+                type: ERROR,
+                payload: error.message
+            });
+        }
+    }
+};
+
+export const filterType = (value) => {
+    return dispatch => {
+        try {
+            console.log(value);
+            dispatch({
+                type: FILTER_TYPE,
+                payload: value,
+            })
+        } catch (error) {
+            dispatch({
+                type: ERROR,
+                payload: error.message
+            });
+        }
+    }
+};
+
+export const OrderAscOrDesc = (value) => {
+    return dispatch => {
+        try {
+            console.log(value);
+            dispatch({
+                type: ORDER_ASC_DESC,
+                payload: value,
+            })
+        } catch (error) {
+            dispatch({
+                type: ERROR,
+                payload: error.message
+            });
+        }
+    }
 };

@@ -1,0 +1,13 @@
+.But {
+    color: #000;
+    padding: 4px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.But:hover{
+    font-size: 26px;
+    cursor: pointer;
+    font-style: italic;
+    color: #b4741f;
+}

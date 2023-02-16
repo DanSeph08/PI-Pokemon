@@ -23,6 +23,8 @@ code {
 }
 
 .dangerus{
-  color: red;
-  font-size: 12px;
+  color: aliceblue;
+  text-shadow: -4px -4px 3px red;
+  text-decoration: underline red;
+  font-size: 17px;
 }
