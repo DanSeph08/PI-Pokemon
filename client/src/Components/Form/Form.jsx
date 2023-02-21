@@ -91,10 +91,10 @@ const Form = () => {
     };
 
     const handleClickSubmit = (event) => {
-        dispatch(postForm(input));
-        setCreate(true);
-        alert('Pokemon Create!');
-        event.preventDefault();
+            dispatch(postForm(input));
+            setCreate(true);
+            alert('Pokemon Create!');
+            event.preventDefault();
     };
 
     return (
@@ -159,7 +159,7 @@ const Form = () => {
                 </div>
                     <button className="ButSubmit" type='submit' onClick={handleClickSubmit}> Create New Pokemon</button>
                     {create ? <p id="CreatePokemon">Pokemon created</p> : <></>}
-                    <img className="Finally" src={Gif} alt="Gif" width="180px" height="150px" />
+                <img className="Finally" src={Gif} alt="Gif" width="180px" height="150px" />
             </form>
         </div>
     )
