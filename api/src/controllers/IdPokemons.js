@@ -37,7 +37,7 @@ const getPokemonsId = async (id) => {
             return pokeApi;
         }
     } catch (error) {
-        
+        console.error(error.message);
     }
 }
 

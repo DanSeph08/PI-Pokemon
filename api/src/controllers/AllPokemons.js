@@ -42,7 +42,7 @@ const getPokemonsAll = async () => {
         return [...pokimons, ...pokimonsDb];
     
     } catch (error) {
-        console.log(error);
+        console.error(error.message);
     }
 };
 
