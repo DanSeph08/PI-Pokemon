@@ -111,17 +111,17 @@ const Form = () => {
                 </div>
                 <div className="Space">
                     <label className="FormName" htmlFor="life">Health: </label>
-                    <input type="number" id="FormBut" name="life" value={input.life} onChange={handleInputChange} className={errors.life && "danger"} min='0' max='100' />
+                    <input type="number" id="FormBut" name="life" value={input.life} onChange={handleInputChange} className={errors.life && "danger"} min='0' max='500' />
                     {errors.life && <p className="dangerus"> {errors.life} </p>}
                 </div>
                 <div className="Space">
                     <label className="FormName" htmlFor="attack">Attack: </label>
-                    <input type="number" id="FormBut" name="attack" value={input.attack} onChange={handleInputChange} className={errors.attack && "danger"} min='0' max='100' />
+                    <input type="number" id="FormBut" name="attack" value={input.attack} onChange={handleInputChange} className={errors.attack && "danger"} min='0' max='500' />
                     {errors.attack && <p className="dangerus"> {errors.attack} </p>}
                 </div>
                 <div className="Space">
                     <label className="FormName" htmlFor="defense">Defense: </label>
-                    <input type="number" id="FormBut" name="defense" value={input.defense} onChange={handleInputChange} className={errors.defense && "danger"} min='0' max='100' />
+                    <input type="number" id="FormBut" name="defense" value={input.defense} onChange={handleInputChange} className={errors.defense && "danger"} min='0' max='500' />
                     {errors.defense && <p className="dangerus"> {errors.defense} </p>}
                 </div>
                 <div className="Space">
