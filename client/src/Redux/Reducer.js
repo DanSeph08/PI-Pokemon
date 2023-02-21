@@ -84,11 +84,11 @@ function rootReducer(state = initialState, action) {
                 }
             }  
         case FILTER_TYPE:
-            const allTypes = state.pokemons;
-            const filterType = action.payload === 'All' ? allTypes : allTypes.filter(pok => pok.types.map(type => type.name).includes(action.payload));
+            const allTypes = state.filters;
+            const filterType = action.payload === 'All' ? allTypes : allTypes?.filter(pok => pok.types.map(type => type.name).includes(action.payload));
             return {
                 ...state,
-                filters: filterType.length ? filterType : [`Pokemons ${action.payload} not found`]
+                pokemons: filterType.length ? filterType : [`Pokemons ${action.payload} not found`]
             }
         case ORDER_ASC_DESC:
             const OrderAll = state.filters;

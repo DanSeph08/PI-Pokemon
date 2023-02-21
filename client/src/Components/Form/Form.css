@@ -23,7 +23,7 @@
 }
 
 .Space {
-    margin-bottom: 9px;
+    margin-bottom: 11px;
 }
 
 .FormName {
@@ -33,6 +33,7 @@
 
 #FormBut{
     border-radius: 5px;
+    margin-bottom: 8px;
 }
 
 .ButSubmit {
@@ -61,4 +62,12 @@
     font-size: 22px;
     color: aliceblue;
     margin-top: 13px;
+}
+
+#ButtonOpen {
+    font-size: 22px;
+    color: aliceblue;
+    padding: 2px;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
 }

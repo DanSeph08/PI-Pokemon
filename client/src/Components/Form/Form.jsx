@@ -157,10 +157,13 @@ const Form = () => {
                     </select>
                     {errors.types && <p className="dangerus"> {errors.types} </p>}
                 </div>
-                    <button className="ButSubmit" type='submit' onClick={handleClickSubmit}> Create New Pokemon</button>
-                    {create ? <p id="CreatePokemon">Pokemon created</p> : <></>}
-                <img className="Finally" src={Gif} alt="Gif" width="180px" height="150px" />
+
+                {Object.entries(errors).length ? (<span id="ButtonOpen">Disabled Button</span>) : (<button className="ButSubmit" type='submit' onClick={handleClickSubmit}> Create New Pokemon</button>)}
+                
+                {create ? <p id="CreatePokemon">Pokemon created</p> : <></>}
+
             </form>
+            {!Object.entries(errors).length && <img className="Finally" src={Gif} alt="Gif" width="180px" height="150px" />}
         </div>
     )
 };

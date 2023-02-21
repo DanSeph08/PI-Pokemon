@@ -21,6 +21,10 @@ const Home = () => {
         dispatch(getAllPokemons())
     }, [dispatch]);
 
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [pokemons.length])
+
     const [currentPage, setCurrentPage] = useState(1);
     const [pokeXPage] = useState(12);
     const indexLast = currentPage * pokeXPage;
