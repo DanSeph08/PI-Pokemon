@@ -95,6 +95,7 @@ const Form = () => {
             setCreate(true);
             alert('Pokemon Create!');
             event.preventDefault();
+            console.log(input);
     };
 
     return (
