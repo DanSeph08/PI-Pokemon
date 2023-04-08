@@ -5,7 +5,7 @@ import Home from './Components/Home/Home';
 import Detail from './Components/Detail/Detail';
 import Form from './Components/Form/Form';
 import axios from 'axios';
-axios.defaults.baseURL = 'https://pi-pokemon-production.up.railway.app/'
+axios.defaults.baseURL = 'https://pi-pokemon-api.vercel.app/';
 
 
 function App() {
